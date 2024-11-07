@@ -95,7 +95,7 @@ public class ImageTracker : MonoBehaviour
                 //{
                     if (arObject.obj.name.Contains(trackedimage.referenceImage.name))
                     {
-                    text2.text = isItTracked.ToString();
+                    text2.text = "";
                     if (isItTracked&&!arObject.isPainting)
                         {
                         if (trackedimage.transform.GetChild(0).childCount > 0)
@@ -164,7 +164,7 @@ public class ImageTracker : MonoBehaviour
                 {
                     
                     Debug.Log(string.Join(',', ArObjects));
-                    text.text = ArObjects[0].isTracked.ToString();
+                    text.text = "";
                     foreach (var arObject in ArObjects)
                     {
                         if (arObject.obj.transform.localScale.y == 0f && !arObject.isPainting&&trackedimage.trackingState==TrackingState.Tracking&& arObject.obj.name.Contains(trackedimage.referenceImage.name))
