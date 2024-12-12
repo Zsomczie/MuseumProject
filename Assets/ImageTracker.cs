@@ -32,8 +32,9 @@ public class ImageTracker : MonoBehaviour
     public TMP_Text text;
     public TMP_Text text2;
 
-    bool hasbeenreset;
+
     bool isItTracked;
+    bool hasbeenreset;
 
     List<ArObject> ArObjects = new List<ArObject>();
 
@@ -93,46 +94,44 @@ public class ImageTracker : MonoBehaviour
             {
                 //if (!trackedimage.referenceImage.name.Contains("Scene"))
                 //{
-                    if (arObject.obj.name.Contains(trackedimage.referenceImage.name))
+                if (arObject.obj.name.Contains(trackedimage.referenceImage.name))
+                {
+                    if (isItTracked && !arObject.isPainting)
                     {
-                    text2.text = "";
-                    if (isItTracked&&!arObject.isPainting)
-                        {
                         if (trackedimage.transform.GetChild(0).childCount > 0)
                         {
-                            
-                        }
                             arObject.obj.SetActive(true);
                         }
-                    else if (!isItTracked && !arObject.isPainting)
-                    {
-                        if (trackedimage.transform.GetChild(0).childCount>0)
-                        {
-                            var permanent = Instantiate(arObject.obj, arObject.obj.transform.position, arObject.obj.transform.rotation);
-                            permanent.transform.SetParent(null);
-                            permanent.transform.position=arObject.obj.transform.position;
-                        }
-                        //arObject.obj.transform.localScale = new Vector3(0, 0, 0);
-                        //int i = ArObjects.IndexOf(arObject);
 
                     }
-                    else if (!isItTracked && arObject.isPainting)
-                    {
-                        arObject.obj.transform.localScale = new Vector3(0, 0, 0);
-                        hasbeenreset = false;
-                    }
+                    //else if (!isItTracked && !arObject.isPainting)
+                    //{
+                    //    if (trackedimage.transform.GetChild(0).childCount>0)
+                    //    {
+                    //        var permanent = Instantiate(arObject.obj, arObject.obj.transform.position, arObject.obj.transform.rotation);
+                    //        permanent.transform.SetParent(null);
+                    //        permanent.transform.position=arObject.obj.transform.position;
+                    //    }
+                    //    //arObject.obj.transform.localScale = new Vector3(0, 0, 0);
+                    //    //int i = ArObjects.IndexOf(arObject);
+
+                    //}
                     else if (isItTracked && arObject.isPainting)
                     {
                         if (!hasbeenreset)
                         {
-                            arObject.obj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+                            //arObject.obj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
                             hasbeenreset = true;
                         }
                         arObject.obj.SetActive(true);
                     }
-                    
-
+                    else if (!isItTracked && arObject.isPainting)
+                    {
+                        arObject.obj.SetActive(false);
+                        hasbeenreset = false;
                     }
+
+                }
                 //}
                 //else if (!isItTracked)
                 //{

@@ -21,9 +21,9 @@ MonoBehaviour:
       m_GuidLow: 5557061529802976835
       m_GuidHigh: 9320437402102871179
     m_SerializedTextureGuid:
-      m_GuidLow: 3262001970627054944
-      m_GuidHigh: 12302951725025129882
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: 2ChocolateChipCookies
-    m_Texture: {fileID: 2800000, guid: 6bd98d60f5822d449af5e6fa68ddbcaa, type: 3}
+      m_GuidLow: 7526704558937196061
+      m_GuidHigh: 1363056196271851146
+    m_Size: {x: 0.275, y: 0.28072664}
+    m_SpecifySize: 1
+    m_Name: Butterfly
+    m_Texture: {fileID: 2800000, guid: 0cc3c61d39eb68748ac6ad83638cea12, type: 3}

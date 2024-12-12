@@ -5,17 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Museum.unity
     guid: 40182dcf71060c440a660163f00692e6
-  - enabled: 0
-    path: Assets/Scenes/Otter.unity
-    guid: 3942eb1223dee1642a0b6d50e5ebdfc6
-  - enabled: 0
-    path: Assets/Samples/XR Interaction Toolkit/3.0.4/AR Starter Assets/ARDemoScene.unity
+  - enabled: 1
+    path: Assets/Scenes/FlowerField.unity
     guid: da4db6c21a88243878fecfe160c1be3b
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
